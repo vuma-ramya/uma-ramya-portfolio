@@ -763,7 +763,201 @@
     color: rgba(245,243,239,0.45);
     font-family: var(--mono);
   }
+  /* RESEARCH*/
+  .research { background: var(--ink); padding: 7rem 3rem; }
 
+.research-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.paper-card {
+  display: block;
+  text-decoration: none;
+  border: 1px solid rgba(0,229,180,0.2);
+  border-radius: 4px;
+  padding: 2.5rem;
+  background: rgba(0,229,180,0.03);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s;
+  cursor: none;
+}
+
+.paper-card:hover {
+  border-color: var(--neon);
+  transform: translateY(-4px);
+}
+
+.paper-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.paper-badge {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--neon);
+  padding: 0.3rem 0.8rem;
+  border-radius: 2px;
+  font-weight: 500;
+}
+
+.paper-arrow {
+  font-size: 1.5rem;
+  color: rgba(0,229,180,0.4);
+  transition: all 0.2s;
+  line-height: 1;
+}
+
+.paper-card:hover .paper-arrow {
+  color: var(--neon);
+  transform: translate(3px, -3px);
+}
+
+.paper-journal {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.paper-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--paper);
+  line-height: 1.35;
+  margin-bottom: 1rem;
+}
+
+.paper-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: rgba(245,243,239,0.35);
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.05em;
+}
+
+.paper-dot { color: var(--neon); }
+
+.paper-abstract {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: rgba(245,243,239,0.55);
+  margin-bottom: 1.5rem;
+  border-left: 2px solid rgba(0,229,180,0.3);
+  padding-left: 1rem;
+}
+
+.paper-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.paper-tag {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: var(--neon);
+  border: 1px solid rgba(0,229,180,0.25);
+  padding: 0.3rem 0.7rem;
+  border-radius: 1px;
+  letter-spacing: 0.05em;
+}
+
+.paper-cta {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--neon);
+}
+
+.research-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.research-stat-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1px;
+  background: rgba(200,169,110,0.15);
+}
+
+.research-stat {
+  background: var(--ink);
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.research-stat-num {
+  font-family: var(--mono);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--neon);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.research-stat-label {
+  font-size: 0.65rem;
+  color: rgba(245,243,239,0.35);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.research-quote {
+  border: 1px solid rgba(200,169,110,0.2);
+  border-radius: 4px;
+  padding: 2rem;
+}
+
+.research-quote-mark {
+  font-family: var(--serif);
+  font-size: 4rem;
+  color: var(--accent);
+  line-height: 0.5;
+  margin-bottom: 1rem;
+  opacity: 0.6;
+}
+
+.research-quote p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(245,243,239,0.65);
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.research-quote-author {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 900px) {
+  .research-grid { grid-template-columns: 1fr; }
+  .research { padding: 5rem 1.5rem; }
+}
   /* CONTACT */
   .contact {
     background: var(--ink);
@@ -877,6 +1071,7 @@
     <li><a href="#experience">Work</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#education">Education</a></li>
+    <li><a href="#research">Research</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -920,10 +1115,7 @@
     <div class="avatar-frame">
       <div class="avatar-border"></div>
       <!-- Replace the div below with: <img src="your-photo.jpg" alt="Uma Ramya" class="avatar-img"> -->
-      <div class="avatar-placeholder">
-        <div class="avatar-initials">URV</div>
-        <div class="avatar-sub">Add Your Photo</div>
-      </div>
+    <img src="photo.jpg" alt="Uma Ramya" class="avatar-img">
       <div class="avatar-badge">
         <div class="badge-num">99.95%</div>
         <div class="badge-label">Platform Uptime</div>
@@ -1160,16 +1352,93 @@
     </div>
   </div>
 </section>
+<! ---RESEARCH ----!>
+  <section class="research" id="research">
+  <div class="section-tag">Published Research</div>
+  <div class="section-title">My <em>Research</em><br>&amp; Publications</div>
 
+  <div class="research-grid">
+
+    <a href="https://www.researchgate.net/publication/325117184_Sentiment_Analysis_of_Movie_Review_using_Machine_Learning_Techniques"
+       target="_blank"
+       class="paper-card">
+
+      <div class="paper-top">
+        <div class="paper-badge">Published · March 2018</div>
+        <div class="paper-arrow">↗</div>
+      </div>
+
+      <div class="paper-journal">
+        International Journal of Engineering &amp; Technology · Vol 7(2.7):676
+      </div>
+
+      <div class="paper-title">
+        Sentiment Analysis of Movie Review Using Machine Learning Techniques
+      </div>
+
+      <div class="paper-meta">
+        <span>DOI: 10.14419/ijet.v7i2.7.10921</span>
+        <span class="paper-dot">·</span>
+        <span>ResearchGate</span>
+      </div>
+
+      <div class="paper-abstract">
+        Explored machine learning techniques to classify and analyze sentiment
+        in movie reviews — combining NLP preprocessing, feature extraction,
+        and ensemble classifiers to achieve high-accuracy opinion mining at scale.
+      </div>
+
+      <div class="paper-tags">
+        <span class="paper-tag">NLP</span>
+        <span class="paper-tag">Sentiment Analysis</span>
+        <span class="paper-tag">Machine Learning</span>
+        <span class="paper-tag">Text Classification</span>
+      </div>
+
+      <div class="paper-cta">Click to read the full paper ↗</div>
+
+    </a>
+
+    <div class="research-side">
+
+      <div class="research-stat-block">
+        <div class="research-stat">
+          <div class="research-stat-num">2018</div>
+          <div class="research-stat-label">Year Published</div>
+        </div>
+        <div class="research-stat">
+          <div class="research-stat-num">Peer</div>
+          <div class="research-stat-label">Reviewed Journal</div>
+        </div>
+        <div class="research-stat">
+          <div class="research-stat-num">NLP</div>
+          <div class="research-stat-label">Core Domain</div>
+        </div>
+      </div>
+
+      <div class="research-quote">
+        <div class="research-quote-mark">"</div>
+        <p>
+          This research laid the foundation of my deep interest in
+          natural language processing — a thread that runs through
+          everything I build today with LLMs and RAG systems.
+        </p>
+        <div class="research-quote-author">— Uma Ramya Vigrahala</div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <p class="section-tag" style="justify-content:center; margin-bottom:2rem;">Let's Connect</p>
   <div class="contact-big">Let's build <br><span>something</span> great</div>
   <p class="contact-sub">Open to senior AI/ML roles, consulting & collaboration</p>
   <div class="contact-links">
-    <a href="mailto:uma.ramya@email.com" class="contact-link">✉ Email Me</a>
-    <a href="https://linkedin.com/in/uma-ramya-vigrahala" class="contact-link" target="_blank">LinkedIn</a>
-    <a href="https://github.com/uma-ramya" class="contact-link" target="_blank">GitHub</a>
+    <a href="mailto:umaramyavigrahala3@gmail.com" class="contact-link">✉ Email Me</a>
+    <a href="http://linkedin.com/in/uma-ramya-16a138267" class="contact-link" target="_blank">LinkedIn</a>
+    <a href="https://github.com/vuma-ramya" class="contact-link" target="_blank">GitHub</a>
   </div>
 </section>
 
